@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="productCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductCategory" syncable="YES"/>
+    </entity>
+    <entity name="ProductCategory" representedClassName="ProductCategory" syncable="YES">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ProductCategory" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Product" positionX="187" positionY="45" width="128" height="103"/>
+    </elements>
+</model>
